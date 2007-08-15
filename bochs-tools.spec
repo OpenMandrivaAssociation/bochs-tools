@@ -23,7 +23,7 @@ operating-systems. Feedback on this issue is appreciated.
 
 %prep
 
-%setup -n %{shortname}-%{version}
+%setup -q -n %{shortname}-%{version}
 
 %build
 
