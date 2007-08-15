@@ -7,6 +7,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source: http://www.bablokb.de/%{name}/%{shortname}-%{version}.tar.bz2
+Patch0:		bochstools-1.6.4-_syscall5.patch
 License: GPL
 URL: http://www.bablokb.de/%{name}/
 BuildRoot: %{_tmppath}/%{name}-root
@@ -24,6 +25,7 @@ operating-systems. Feedback on this issue is appreciated.
 %prep
 
 %setup -q -n %{shortname}-%{version}
+%patch0 -p6 -b .syscall5
 
 %build
 
