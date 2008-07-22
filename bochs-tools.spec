@@ -1,7 +1,7 @@
 %define name		bochs-tools
 %define shortname	bochstools
 %define version		1.6.4
-%define release		%mkrel 2
+%define release		%mkrel 4
 
 Name:		%{name}
 Version:	%{version}
