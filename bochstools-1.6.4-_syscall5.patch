@@ -1,0 +1,22 @@
+--- /home/pterjan/rpm/BUILD/bochstools-1.6.4/src/bxtptinfo.c~	2004-01-14 13:29:31.000000000 +0100
++++ /home/pterjan/rpm/BUILD/bochstools-1.6.4/src/bxtptinfo.c	2007-08-15 20:51:28.000000000 +0200
+@@ -88,9 +88,19 @@
+  * Note: we use 512-byte sectors here, irrespective of the hardware ss.
+  */
+ #if !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__)
++
++#ifdef _syscall5
+ static
+ _syscall5(int,  _llseek,  uint,  fd, ulong, hi, ulong, lo,
+        loff_t *, res, uint, wh);
++#else
++static int _llseek (unsigned int fd, unsigned long oh,
++                   unsigned long ol, long long *result,
++                   unsigned int origin) {
++       return syscall (__NR__llseek, fd, oh, ol, result, origin);
++}
++#endif /* _syscall5 */
++
+ #endif
+ 
+ static int
