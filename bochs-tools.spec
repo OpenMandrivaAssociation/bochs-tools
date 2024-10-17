@@ -10,7 +10,7 @@ Release:	%{release}
 Source: http://www.bablokb.de/%{name}/%{shortname}-%{version}.tar.bz2
 Patch0:		bochstools-1.6.4-_syscall5.patch
 License: GPL
-URL: http://www.bablokb.de/%{name}/
+URL: https://www.bablokb.de/%{name}/
 Group: Emulators
 Summary: Manipulates Bochs disk-images
 
