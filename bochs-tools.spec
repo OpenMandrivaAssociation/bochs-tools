@@ -14,6 +14,7 @@ URL: https://www.bablokb.de/%{name}/
 Group: Emulators
 Summary: Manipulates Bochs disk-images
 
+BuildRequires:	make
 %description
 Bochs-Tools are a collection of scripts and programs to be used together with
 the Bochs-emulator. The main goal was to provide a Unix-like interface to the
